@@ -1,0 +1,21 @@
+1. If you included files other than baseline_crf.py, advanced_crf.py, evaluate_model.py, and hw3_corpus_tool.py, or modified hw3_corpus_tool.py please describe what the files do and/or your modifications to hw3_corpus_tool.py.
+
+Answer: I have included baseline_crf.py and advanced_crf.py in my vocareum workspace, plus i am using the hw3_corpus_tool.py code with in my both main files to extract the Dialogue Utterance for eachfile from directory. For evaluation purpose i have written an evaluation function at the end of my code that takes into account the total labels count and totla labels predicted by taggerand then running a math function to calculate accuracy and print it. Currntly the code for that is commmented out in main scripts.
+
+2. Describe how you evaluated your baseline and advanced features
+
+Answer: For both Baseline and Advanced features i have divided the given corpous into 25% and 75 % data ratio where i am using 25% of data for my development purpose and rest 75% for training purpose.
+For Baseline features while evaluating i am considering four key aspects first if the speaker has changed from last utterance or not if yes a feature should mark it, wheather or not if this is the first utterance of the dialogue, plus feature for each token in the set and for each POS in the set
+For Advanced part, along with considering four feature from Baseline, i am also considering and have feature for bigram of token and POS plus trigram for Token and POS of each utterance. Plus marking a feature if the sentence ends in a question or not
+
+
+3. Describe your advanced feature set.
+
+Answer: My advanced feature set has 9 features, namely features for first line of utterance in each dialogue, spaeker change in each utterance, feature for single token and POS plus feature marking bigram and trigram both for token and POS in each utterance.Plus marking a feature if the sentence ends in a question or not
+
+4. If you tried alternate advanced feature sets, please describe them.
+
+Answer: Apart from what i am currently using i tried inserting the first token of the next utterance at the end of the utterance but it didn't helped anything and i lost about 4% of my accuracy with its implementation.
+
+5. Accuracy of baseline features was: 72.1836520828%
+6. Accuracy of advanced features was: 73.3625884202%
